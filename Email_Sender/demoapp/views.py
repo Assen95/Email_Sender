@@ -17,7 +17,7 @@ def send_email(request):
             sender = settings.EMAIL_HOST_USER
             recipient = email_form.cleaned_data["to_email"]
 
-            send_mail(subject, message, sender, [recipient])
+            send_mail(subject, message, sender, [recipient], html_message=message)
             email_form.save()
             return redirect('send_email')
 

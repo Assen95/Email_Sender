@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-    <title>{{title}}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/css/email.css">
 </head>
 <body>
     <h1>
@@ -12,31 +14,21 @@
     <form action ="{% url 'send_email' %}" method="post">
         {% csrf_token %}
         <table>
-            {{ email_form.as_p }}
-{#            <tr>#}
-{#                <td>#}
-{#                    <h3>Subject</h3>#}
-{#                    <input type="text" name="subject">#}
-{#                </td>#}
-{#            <tr>#}
-{#                <td>#}
-{#                    <h3>Recipient</h3>#}
-{#                    <input type="email" name="toemail">#}
-{#                </td>#}
-{#            </tr>#}
-{#            </tr>#}
-{#            <tr>#}
-{#                <td colspan='2'>#}
-{#                    <textarea name="content" cols="30" rows="10"></textarea>#}
-{#                </td>#}
-{#            </tr>#}
-{#            <tr>#}
+{#            {{ email_form.as_p }}#}
+            <tr class="first_fields">
+                <td>{{ email_form.subject }}</td>
+            <tr class="first_fields">
+                <td>{{ email_form.to_email }}</td>
+            </tr>
+            <tr>
                 <td>
-                    <input type="submit" value="Send Mail">
+                    {{ email_form.content }}
                 </td>
-                <td>
-                    <input type="reset" value="Clear Fields">
-                </td>
+            </tr>
+            <tr class="buttons">
+                <th class="submit-btn"><input type="submit" value="Send Mail"></th>
+                <th class="clear-btn"><input type="reset" value="Clear Fields"></th>
+            </tr>
         </table>
     </form>
 

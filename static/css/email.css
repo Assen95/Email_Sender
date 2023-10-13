@@ -1,0 +1,71 @@
+body {
+    background-image: url("../images/background.jpg");
+    max-width: 500px;
+    margin: auto;
+    margin-top: 100px;
+    padding-right: 50px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+    text-shadow: -1px -1px lightblue, 1px 1px mediumpurple, -3px 0 4px gray;
+    font-family: "Segoe Print", Arial, Helvetica, sans-serif;
+    color: lightcyan;
+    margin-left: 30%;
+}
+
+table {
+    display: block;
+}
+
+table .first_fields {
+    display: inline-block;
+    padding-bottom: 20px;
+}
+
+table .first_fields td input{
+    height: 29px;
+    border: 1px solid lightpink;
+    box-shadow: -1px 1px hotpink, 1px 1px lightcoral, -3px 0 5px lightpink;
+    border-radius: 10px;
+}
+
+table .first_fields:nth-child(1){
+    padding-right: 40%;
+}
+
+.buttons {
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translate(-55%);
+}
+
+.submit-btn {
+    padding-right: 150px;
+}
+
+.clear-btn{
+    padding-left: 150px;
+}
+
+/*.submit-btn>input{*/
+/*    height: 30px;*/
+/*    width: 100px;*/
+/*    border-radius: 10px;*/
+/*}*/
+
+/*.clear-btn>input{*/
+/*    height: 30px;*/
+/*    width: 100px;*/
+/*}*/
+
+.buttons th>input{
+    height: 30px;
+    width: 90px;
+    border: 2px solid lightpink;
+    box-shadow: -1px -1px hotpink, 1px 1px lightcoral, -3px 0 5px lightpink;
+    border-radius: 10px;
+    background-color: white;
+}
